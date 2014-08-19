@@ -10,6 +10,10 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 ### Tasks to create
 
 1. Using the new/save syntax, create a student, first and last name and an age 
+
+        tim = Student.new(:first_name => "Tim", :last_name => "Licata", :age => 30)
+        tim.save
+
 2. Save the student to the database
 3. Using the find/set/save syntax update the student's first name to taco
 4. Delete the student (where first_name is taco)
