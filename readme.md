@@ -25,6 +25,10 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
        tim.save
 
 4. Delete the student (where first_name is taco)
+
+      tim = Student.find_by_first_name("taco")
+      tim.destroy
+
 5. Validate that every Student's last name is unique
 6. Validate that every Student has a first and last name that is longer than 4 characters
 7. Validate that every first and last name cannot be empty
