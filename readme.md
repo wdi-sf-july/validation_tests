@@ -36,6 +36,13 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
        end
 
 6. Validate that every Student has a first and last name that is longer than 4 characters
+
+       class Student < ActiveRecord::Base
+         validates_uniqueness_of :last_name
+         validates_length_of :first_name, :minimum => 4
+         validates_length_of :last_name, :minimum => 4
+       end
+
 7. Validate that every first and last name cannot be empty
 7. Combine all of these individual validations into one validation (using validate and a hash) 
 8. Using the create syntax create a student named John Doe who is 33 years old
