@@ -19,6 +19,11 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
        tim.save
 
 3. Using the find/set/save syntax update the student's first name to taco
+
+       tim = Student.find(1)
+       tim.first_name = "taco"
+       tim.save
+
 4. Delete the student (where first_name is taco)
 5. Validate that every Student's last name is unique
 6. Validate that every Student has a first and last name that is longer than 4 characters
