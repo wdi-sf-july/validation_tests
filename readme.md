@@ -15,6 +15,9 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
         tim.save
 
 2. Save the student to the database
+
+       tim.save
+
 3. Using the find/set/save syntax update the student's first name to taco
 4. Delete the student (where first_name is taco)
 5. Validate that every Student's last name is unique
