@@ -30,6 +30,11 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
        tim.destroy
 
 5. Validate that every Student's last name is unique
+
+       class Student < ActiveRecord::Base
+         validates_uniqueness_of :last_name
+       end
+
 6. Validate that every Student has a first and last name that is longer than 4 characters
 7. Validate that every first and last name cannot be empty
 7. Combine all of these individual validations into one validation (using validate and a hash) 
