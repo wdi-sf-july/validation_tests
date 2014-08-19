@@ -44,6 +44,10 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
        end
 
 7. Validate that every first and last name cannot be empty
+
+          validates_presence_of :first_name
+          validates_presence_of :last_name
+
 7. Combine all of these individual validations into one validation (using validate and a hash) 
 8. Using the create syntax create a student named John Doe who is 33 years old
 9. Show if this new student entry is valid
