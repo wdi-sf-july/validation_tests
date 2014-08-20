@@ -76,6 +76,9 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
         john.errors.clear
 
 13. Save Jonathan Doesmith
+
+        john.save
+
 15. Find all of the Students
 16. Find the student with an ID of 128 and if it does not exist, make sure it returns nil and not an error
 17. Find the first student in the table
