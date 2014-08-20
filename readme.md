@@ -50,8 +50,8 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 7. Combine all of these individual validations into one validation (using validate and a hash) 
 
         class Student < ActiveRecord::Base
-          validates :first_name, length: {:minimum => 4}, presence: true
-          validates :last_name, length: {:minimum => 4}, presence: true, uniqueness: true
+          validates :first_name, length: {:minimum => 5}, presence: true
+          validates :last_name, length: {:minimum => 5}, presence: true, uniqueness: true
         end
 
 8. Using the create syntax create a student named John Doe who is 33 years old
