@@ -2,9 +2,9 @@ class Student < ActiveRecord::Base
   validates :first_name, length: {:minimum => 4}, presence: true
   validates :last_name, length: {:minimum => 4}, presence: true, uniqueness: true
 
-  @only_letters_and_start_with_cap = /\A[A-Z][a-zA-Z]*\z/
-  validates_format_of :first_name, :with => @only_letters_and_start_with_cap
-  validates_format_of :last_name, :with => @only_letters_and_start_with_cap
+  ONLY_LETTERS_AND_START_WITH_CAP = /\A[A-Z][a-zA-Z]*\z/
+  validates_format_of :first_name, :with => ONLY_LETTERS_AND_START_WITH_CAP
+  validates_format_of :last_name, :with => ONLY_LETTERS_AND_START_WITH_CAP
 
   INSTRUCTORS = [{:first_name => "Delmer", :last_name => "Reed"},
                  {:first_name => "Tim", :last_name => "Licata"},
