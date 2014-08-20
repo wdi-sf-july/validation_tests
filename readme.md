@@ -88,6 +88,9 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
         Student.find_by_id(128)
 
 17. Find the first student in the table
+
+        Student.first
+
 18. Find the last student in the table
 19. Find the student with the last name of Doesmith
 21. Find all of the students and limit the search to 5 students, starting with the 2nd student and finally, order the students in alphabetical order
