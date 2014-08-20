@@ -72,6 +72,9 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
         john.update_attributes(:first_name => "Jonathan", :last_name => "Doesmith")
 
 12. Clear the errors array
+
+        john.errors.clear
+
 13. Save Jonathan Doesmith
 15. Find all of the Students
 16. Find the student with an ID of 128 and if it does not exist, make sure it returns nil and not an error
