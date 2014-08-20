@@ -64,6 +64,9 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
         john.valid?
 
 10. Show the number of errors for this student instance
+
+        john.errors.size
+
 11. In one command, Change John Doe's name to Jonathan Doesmith 
 12. Clear the errors array
 13. Save Jonathan Doesmith
