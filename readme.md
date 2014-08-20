@@ -68,6 +68,9 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
         john.errors.size
 
 11. In one command, Change John Doe's name to Jonathan Doesmith 
+
+        john.update_attributes(:first_name => "Jonathan", :last_name => "Doesmith")
+
 12. Clear the errors array
 13. Save Jonathan Doesmith
 15. Find all of the Students
