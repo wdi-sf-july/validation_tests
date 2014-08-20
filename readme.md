@@ -38,8 +38,8 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 
        class Student < ActiveRecord::Base
          validates_uniqueness_of :last_name
-         validates_length_of :first_name, :minimum => 4
-         validates_length_of :last_name, :minimum => 4
+         validates_length_of :first_name, :minimum => 5
+         validates_length_of :last_name, :minimum => 5
        end
 
 7. Validate that every first and last name cannot be empty
