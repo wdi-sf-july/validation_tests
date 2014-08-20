@@ -84,6 +84,9 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
         Student.all
 
 16. Find the student with an ID of 128 and if it does not exist, make sure it returns nil and not an error
+
+        Student.find_by_id(128)
+
 17. Find the first student in the table
 18. Find the last student in the table
 19. Find the student with the last name of Doesmith
