@@ -129,7 +129,7 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
           def no_instructors
             INSTRUCTORS.each do |teacher|
               if teacher[:first_name] == first_name and teacher[:last_name] == last_name
-                errors.add(:username, "This is a restricted instructor name")
+                errors.add(:first_name, :last_name, "This is a restricted instructor name")
               end
             end
           end
