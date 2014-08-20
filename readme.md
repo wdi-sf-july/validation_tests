@@ -115,4 +115,19 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
 
 2. Write a custom validation to ensure that no one named Delmer Reed, Tim Licata, Anil Bridgpal or Elie Schoppik is included in the students table
 
+          INSTRUCTORS = [{:first_name => "Delmer", :last_name => "Reed"},
+                         {:first_name => "Tim", :last_name => "Licata"},
+                         {:first_name => "Anil", :last_name => "Bridgpal"},
+                         {:first_name => "Elie", :last_name => "Schoppik"}]
+          validate :no_instructors
+
+          def no_instructors
+            INSTRUCTORS.each do |teacher|
+              if teacher[:first_name] == first_name and teacher[:last_name] == last_name
+                errors.add(:username, "This is a restricted instructor name")
+              end
+            end
+          end
+
+
 
