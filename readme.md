@@ -96,6 +96,9 @@ For this lab, we'd like you to strengthen your Rails console skills. This lab is
         Student.last
 
 19. Find the student with the last name of Doesmith
+
+        Student.find_by_last_name("Doesmith")
+
 21. Find all of the students and limit the search to 5 students, starting with the 2nd student and finally, order the students in alphabetical order
 20. Delete Jonathan Doesmith
 
