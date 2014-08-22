@@ -26,4 +26,12 @@ RSpec.describe Student, :type => :model do
     taco = Student.find_by_first_name("Tacoe")
     expect(tim.id).to eq(taco.id)
   end
+
+  it "5) should validate uniqueness on student's last name" do
+    me = Student.new({first_name: "Timothy", last_name: "Licata", age: 30})
+    you = Student.new({first_name: "Louise", last_name: "Licata", age: 26})
+    expect(me.save).to eq(true)
+    expect(you.save).to eq(false)
+    expect(you.errors.messages[:last_name]).to eq(["has already been taken"])
+  end
 end
