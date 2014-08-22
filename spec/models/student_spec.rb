@@ -9,4 +9,11 @@ RSpec.describe Student, :type => :model do
     expect(tim.age).to eq(30)
     expect(tim.new_record?).to eq(true)
   end
+
+  it "2) should save the student to the database" do
+    tim = Student.new(:first_name => "Timothy", :last_name => "Licata", :age => 30)
+    expect(tim.new_record?).to eq(true)
+    expect(tim.save).to eq(true)
+    expect(tim.new_record?).to eq(false)
+  end
 end
