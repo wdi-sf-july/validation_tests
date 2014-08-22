@@ -16,4 +16,14 @@ RSpec.describe Student, :type => :model do
     expect(tim.save).to eq(true)
     expect(tim.new_record?).to eq(false)
   end
+
+  it "3) should use find/set/save syntax to update firstname" do
+    Student.create(:first_name => "Timothy", :last_name => "Licata", :age => 30)
+    tim = Student.find_by_first_name("Timothy")
+    tim.first_name = "Tacoe"
+    expect(tim.save).to eq(true)
+
+    taco = Student.find_by_first_name("Tacoe")
+    expect(tim.id).to eq(taco.id)
+  end
 end
